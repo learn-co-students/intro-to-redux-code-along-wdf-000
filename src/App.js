@@ -23,7 +23,7 @@ function mapStateToProps(state) {
   return {shoppingListItems: state.shoppingListItems}
 }
 
-const connector = connect()
+const connector = connect(mapStateToProps)
 const connectedComponent = connector(App)
 
 export default connectedComponent;

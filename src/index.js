@@ -9,8 +9,7 @@ import './index.css';
 const store = configureStore();
  
 store.dispatch(getShoppingListItems())
- 
- 
+
 ReactDOM.render(
   <Provider store={store}>
    <App />
