@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {connect} from 'react-redux';
 import './App.css';
-
+import logo from './logo.svg';
+import ShoppingList from './ShoppingList';
+ 
 class App extends Component {
   render() {
     return (
@@ -15,4 +17,16 @@ class App extends Component {
   }
 }
 
-export default App;
+// export default App;
+
+function mapStateToProps(state) {
+  return {shoppingListItems: state.shoppingListItems}
+}
+
+const connector = connect()
+const connectedComponent = connector(App)
+
+export default connectedComponent;
+
+
+ 
